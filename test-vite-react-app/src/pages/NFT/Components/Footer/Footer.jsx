@@ -14,8 +14,9 @@ export const Footer = () => {
                 <FooterBoxWidth >
                     <FooterTopLinksBox>
                         <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                        <img src={  diveSeaImg } style={{width: '65px', height: '65px',}} />
-                        <Typography component={'h4'} 
+                            {!isSm && <>
+                            <img src={  diveSeaImg } style={{width: '65px', height: '65px',}} />
+                            <Typography component={'h4'} 
                                     sx={{ 
                                 fontFamily: 'Poppins',
                                 fontWeight: 600,
@@ -26,33 +27,49 @@ export const Footer = () => {
                                 color: 'rgba(255, 255, 255, 1)',
                                 marginLeft: '10px',                          
                                 }} >
-                            DiveSea
-                        </Typography>
-                { isSm && <FooterIcons /> }
-                </Box>
-                    <FooterTopLinksRightBox >
-                        <FooterLink href="#" children={'Privacy Policy'} />
-                        <FooterLink href="#" children={'Term & Conditions'} />
-                        <FooterLink href="#" children={'About Us'} />
-                        <FooterLink href="#" children={'Contact'} />
-                    </FooterTopLinksRightBox>
+                                    DiveSea
+                                </Typography> </>}
+                                {isSm && <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '125vw'}}>
+                                <Box  sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
+                                    <img src={  diveSeaImg } style={{width: '65px', height: '65px',}} />
+                                    <Typography component={'h4'} 
+                                                sx={{ 
+                                                fontFamily: 'Poppins',
+                                                fontWeight: 600,
+                                                fontSize: '30px',
+                                                lineHeight: '130%',
+                                                letterSpacing: '0px',
+                                                verticalAlign: 'middle',
+                                                color: 'rgba(255, 255, 255, 1)',
+                                                marginLeft: '10px', }} >
+                                        DiveSea
+                                    </Typography>
+                                </Box>
+                                <FooterIcons />
+                                </Box>}
+                            </Box>
+                        <FooterTopLinksRightBox >
+                            <FooterLink href="#" children={'Privacy Policy'} />
+                            <FooterLink href="#" children={'Term & Conditions'} />
+                            <FooterLink href="#" children={'About Us'} />
+                            <FooterLink href="#" children={'Contact'} />
+                        </FooterTopLinksRightBox>
+                    </FooterTopLinksBox>
 
-                </FooterTopLinksBox>
-                <Divider sx={{backgroundColor: 'rgba(129, 129, 129, 1)',}} />
-                <FooterBottomLinksBox>
-                    <Typography children={ !isSm ? '© 2023' : '© 2023 DiveSea All Rights Reserved.'  }    sx={{
-                        fontFamily: 'Inter',
-                        fontWeight: 500,
-                        fontSize: '17px',
-                        lineHeight: '25px',
-                        letterSpacing: '0px',
-                        color: 'rgba(153, 153, 153, 1)',
-                        display: 'flex',
-                        marginLeft: isSm ? '90px': 0,
-
-                    }} />
-                    { !isSm && <FooterIcons /> }
-                </FooterBottomLinksBox>
+                        <Divider sx={{backgroundColor: 'rgba(129, 129, 129, 1)',}} />
+                        
+                        <FooterBottomLinksBox sx={isSm &&{display: 'flex', justifyContent: 'center',}} >
+                        <Typography children={ !isSm ? '© 2023' : '© 2023 DiveSea All Rights Reserved.'  }    
+                                    sx={{
+                                    fontFamily: 'Inter',
+                                    fontWeight: 500,
+                                    fontSize: '17px',
+                                    lineHeight: '25px',
+                                    letterSpacing: '0px',
+                                    color: 'rgba(153, 153, 153, 1)',
+                                    display: 'flex', }} />
+                        { !isSm && <FooterIcons /> }
+                        </FooterBottomLinksBox>
                 </FooterBoxWidth>
             </>
 )};

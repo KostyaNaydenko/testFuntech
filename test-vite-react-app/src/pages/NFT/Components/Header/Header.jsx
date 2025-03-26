@@ -51,7 +51,7 @@ export const Header = ({openProps}) => {
                                 <HeaderModal open={isOpen} close={() => setOpen(false)} />
                             </>
                         )}
-                    </AppBar>
+                </AppBar>
             </>
     );
 };

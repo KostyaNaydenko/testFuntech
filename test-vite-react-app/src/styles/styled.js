@@ -11,14 +11,8 @@ export const Main = styled('main')(({theme})=>({
     [theme.breakpoints.down('lg')]: {
       transformOrigin: 'left top',
       scale: '0.7',
-      width: '140.389vw',
-      marginBottom: '-586px',
-    },
-
-    [theme.breakpoints.up('xxl')]: {
-      transformOrigin: 'left top',
-      scale: '1.8',
-      marginBottom: '1775px'
+      width: '142.4vw',
+      marginBottom: '-576px',
     },
 
 }));
@@ -167,7 +161,12 @@ export const ContainerHeaderAll = styled('div')(({theme})=>({
   },
 
   [theme.breakpoints.up('xxl')]: {
-    paddingLeft: '180px',
+    paddingLeft: '340px',
+  },
+
+  [theme.breakpoints.up('xxxl')]: {
+    scale: '1.1',
+    paddingLeft: '450px',
   },
 }))
 
@@ -176,9 +175,9 @@ export const ContainerHeaderImages = styled(Box)(({ theme }) => ({
   height: '543px',
   position: 'relative',
   marginTop: '96px',
-  //marginLeft: '780px',
+
   [theme.breakpoints.down('lg')]: {
-    marginLeft: '380px',
+    marginLeft: '40px',
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -186,12 +185,11 @@ export const ContainerHeaderImages = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('xxs')]: {
-    marginRight: '300px',
+    marginRight: '0px',
   },
 
-  [theme.breakpoints.up('xxl')]: {
-    scale: '0.7',
-    marginLeft: '-100px',
+  [theme.breakpoints.up('xxxl')]: {
+    marginLeft: '500px',
   },
 }));
 
@@ -268,7 +266,6 @@ export const HeaderContentImage_4Blur = styled(HeaderContentImage_4)(({theme})=>
 }))
 
 export const FooterBoxWidth = styled('div')(({theme})=>({
-  //width: '1246px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
@@ -300,7 +297,8 @@ export const FooterBoxWidth = styled('div')(({theme})=>({
   },
 
   [theme.breakpoints.up('xxl')]: {
-    //scale: '1.8',
+    paddingLeft: '436px',
+    paddingRight: '436px',
   },
 }))
 
@@ -352,15 +350,18 @@ export const BannerContainer = styled('div')(({theme})=>({
   },
 
   [theme.breakpoints.up('xxl')]: {
-    marginRight: '1095px',
-    paddingLeft: '120px',
-    paddingRight: '120px',
-    paddingTop: '90px',
-    paddingBottom: '90px',
+    paddingLeft: '420px',
+    paddingRight: '420px',
+    paddingTop: '290px',
+    paddingBottom: '290px',
   },
 
   [theme.breakpoints.up('xxxl')]: {
-    marginRight: '1360px',
+    paddingLeft: '720px',
+    paddingRight: '720px',
+    paddingTop: '90px',
+    paddingBottom: '90px',
+    scale: '1.2',
   },
 
 }));
@@ -390,12 +391,8 @@ export const SwiperBox = styled(Box)(({theme})=>({
     backgroundColor: 'none',
   },
 
-  [theme.breakpoints.up('xxl')]: {
-    marginRight: '1095px',
-  },
-
   [theme.breakpoints.up('xxxl')]: {
-    marginRight: '1368px',
+    //marginRight: '1368px',
   },
 }))
 
